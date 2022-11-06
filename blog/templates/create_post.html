@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+    %}
+    <br><br>
+    <h1 align="center">SALEM CITY BLOG </h1>
+    <h3>Make a Post</h3>
+    
+    <form method="POST">
+      <!--<label for="title">Title:</label>
+        <input class="form-control" type="text" name="title" id="title" placeholder="Enter Title"
+            aria-label="Enter Title">
+      --><br>
+      <textarea name="text" id="text" class="form-control"></textarea>
+      <br />
+      <div align="center">
+        <button type="submit" class="btn btn-lg btn-primary">Post</button>
+      </div>
+    </form>
+    <br />
+    <div align="center">
+      <a href="/home"
+        ><button type="button" class="btn btn-lg btn-secondary">Back</button></a
+      >
+    </div>
+    {% endblock %}
