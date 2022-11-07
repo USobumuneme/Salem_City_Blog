@@ -9,6 +9,7 @@ views = Blueprint("views", __name__)
 @views.route("/")
 @views.route("/home")
 def home():
+    #title = Post.query.all()
     posts = Post.query.all()
     return render_template("home.html", user=current_user, posts=posts)
 
@@ -54,7 +55,9 @@ def create_post():
         if not text:
             flash('Post cannot be empty', category='error')
         else:
+            #title = Post( title = title, author=current_user.id)-->
             post = Post( text=text, author=current_user.id)
+            #db.session.add(title)
             db.session.add(post)
             db.session.commit()
             flash('Post created!', category='success')
